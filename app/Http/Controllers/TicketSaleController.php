@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ticket;
 use App\Models\TicketSale;
-use App\Services\Available;
 use Illuminate\Http\Request;
 use App\Http\Requests\TicketSaleRequest;
 use App\Http\Resources\TicketSaleResource;
@@ -64,7 +62,7 @@ class TicketSaleController extends ApiController
     {
         $ticketSale = $ticketSale->update($request->all());
 
-        return $this->sendResponse($ticketSale, 'Cliente actualizado correctamente');
+        return $this->sendResponse($ticketSale, 'Cambio efectuado correctamente');
     }
 
     /**
@@ -77,6 +75,6 @@ class TicketSaleController extends ApiController
     {
         $ticketSale->delete();
 
-        return $this->sendResponse($ticketSale, 'Cliente eliminado correctamente');
+        return $this->sendResponse($ticketSale, 'Reversion de la transaccion correctamente');
     }
 }

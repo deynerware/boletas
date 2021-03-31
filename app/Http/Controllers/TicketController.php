@@ -78,6 +78,11 @@ class TicketController extends ApiController
         return $this->sendResponse($ticket, 'Ticket eliminado correctamente');
     }
 
+    /**
+     * Returns the list of tickets available for sale
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function available()
     {
         $availables = TicketResource::collection(
