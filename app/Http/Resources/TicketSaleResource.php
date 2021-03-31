@@ -15,12 +15,11 @@ class TicketSaleResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'        => $this->id,
-            'serial'    => $this->serial,
-            'event'     => $this->event,
-            'date'      => $this->date,
-            'time'      => $this->time,
-            'place'     => $this->place,
+            'id'                => $this->id,
+            'cliente_id'        => $this->client_id,
+            'ticket_id'         => $this->ticket_id,
+            'way_to_pay'        => $this->way_to_pay,
+            'quantity'          => $this->quantity,
         ];
     }
 }
